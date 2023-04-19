@@ -4,10 +4,8 @@ const d = document,
   $lineCenter = d.querySelector(".line2"),
   $lineButtom = d.querySelector(".line3");
 
-d.addEventListener("click", (e) => {
-  if (e.target.id == "menu") {
-    $lineTop.classList.toggle("top");
-    $lineCenter.classList.toggle("center");
-    $lineButtom.classList.toggle("buttom");
-  }
+$menu.addEventListener("click", (e) => {
+  $lineTop.classList.toggle("top");
+  $lineCenter.classList.toggle("center");
+  $lineButtom.classList.toggle("buttom");
 });
