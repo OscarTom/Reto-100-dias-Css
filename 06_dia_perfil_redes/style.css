@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+body {
+  /* border: 2px solid red; */
+  height: 100vh;
+  background: rgb(255, 204, 107);
+  background: linear-gradient(58deg, rgba(255, 204, 107, 1) 0%, rgba(223, 115, 80, 1));
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  /* border: 2px solid red; */
+  aspect-ratio: 1/1;
+  width: 500px;
+  background-color: white;
+  box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.404);
+
+  display: grid;
+  grid-template-columns: 0.7fr 0.3fr;
+}
+
+.left {
+  /* border: 2px solid red; */
+  height: 80%;
+  width: 100%;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.foto {
+  height: 130px;
+  width: 130px;
+  background-image: url(img/jessica-potter.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.foto::before {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  top: -6px;
+  left: -6px;
+  border: 1px solid;
+  border-color: #786450 #786450 #786450 transparent;
+  border-radius: 50%;
+  transition: all 1.5s ease-in-out;
+}
+
+.foto:hover:before {
+  transform: rotateZ(360deg);
+}
+
+.foto::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: -11.5px;
+  left: -11.5px;
+  border: 1px solid;
+  border-color: #786450 transparent #786450 #786450;
+  border-radius: 50%;
+  transition: all 1.5s ease-in-out;
+}
+
+.foto:hover:after {
+  transform: rotateZ(-360deg);
+}
+
+.nombre {
+  /* border: 2px solid red; */
+  text-align: center;
+  margin-bottom: 10%;
+  font-size: 1.3rem;
+}
+
+.links {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  height: 30%;
+  width: 75%;
+  gap: 10%;
+  font-weight: bold;
+}
+
+.link {
+  margin: auto;
+  height: 40%;
+  width: 90%;
+  border-radius: 30px;
+  border: 3px solid #958676;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link:hover {
+  color: white;
+  background-color: #786450;
+  transition: 500ms ease-in-out;
+}
+
+/* RIGHT*/
+.right {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  background-color: #f5e8df;
+  height: 33.3%;
+  width: 100%;
+  border: 1px solid white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  transition: 500ms ease-in-out;
+}
+
+.info span {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.info:hover {
+  background-color: #d6c6bb;
+}
